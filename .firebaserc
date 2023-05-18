@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "new-project-2878b": {
+      "hosting": {
+        "my-project": [
+          "new-project-2878b"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "new-project-2878b"
+  }
+}
