@@ -14,9 +14,7 @@ import { environment } from 'src/environments/environment';
 import { PagesListComponent } from './pages-list/pages-list.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { AfService } from './providers/af.service';
-import { AppNavbarComponent } from './app-navbar/app-navbar.component';
 import { HomePageComponent } from './home-page/home-page.component';
-import { AdminPageComponent } from './admin-page/admin-page.component';
 import { AdminGuard } from './guards/admin.guard';
 import { SubscriberGuard } from './guards/subscriber.guard';
 import { MaterialModule } from './material.module';
@@ -27,9 +25,7 @@ import { MaterialModule } from './material.module';
     AppComponent,
     PagesListComponent,
     LoginPageComponent,
-    AppNavbarComponent,
     HomePageComponent,
-    AdminPageComponent
   ],
   imports: [
     BrowserModule,
