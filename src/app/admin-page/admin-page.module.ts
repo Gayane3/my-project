@@ -7,11 +7,12 @@ import { AdminPageComponent } from './admin-page.component';
 import { AppNavbarComponent } from './app-navbar/app-navbar.component';
 import { MenusComponent } from './menus/menus.component';
 import { PostsComponent } from './posts/posts.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
-import {MatTableModule} from '@angular/material/table';
+import { MatTableModule } from '@angular/material/table';
 import { ConfirmationDialogComponent } from './shared/confirmation-dialog/confirmation-dialog.component';
-import { EditMenuComponent } from './menus/edit-menu/edit-menu.component'; 
+import { EditMenuComponent } from './menus/edit-menu/edit-menu.component';
+import { EditPostComponent } from './posts/edit-post/edit-post.component'; 
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { EditMenuComponent } from './menus/edit-menu/edit-menu.component';
     MenusComponent,
     PostsComponent,
     ConfirmationDialogComponent,
-    EditMenuComponent,    
+    EditMenuComponent,
+    EditPostComponent,    
   ],
   imports: [
     CommonModule,
@@ -30,8 +32,9 @@ import { EditMenuComponent } from './menus/edit-menu/edit-menu.component';
     AdminRoutingModule,
     FormsModule,
     MatInputModule,
-    MatTableModule
+    MatTableModule,
+    ReactiveFormsModule
   ],
-  entryComponents: [ConfirmationDialogComponent, EditMenuComponent]
+  entryComponents: [ConfirmationDialogComponent, EditMenuComponent, EditPostComponent]
 })
 export class AdminPageModule { }

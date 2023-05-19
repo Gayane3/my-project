@@ -5,13 +5,14 @@ import { map } from 'rxjs/operators';
 
 export interface Post {
   title: "",
-  url: ""
+  menu_id: "",
+  content: ""
 }
 
 @Injectable({
   providedIn: 'root'
 })
-export class MenusService {
+export class PostsService {
 
   constructor(private afs: AngularFirestore) { }
 
@@ -36,7 +37,7 @@ export class MenusService {
     this.afs.doc('posts/'+postId).delete();
   }
 
-  updateMenu(postId: string, post: Post) {
+  updatePost(postId: string, post: Post) {
     this.afs.doc('posts/'+postId).update(post)
   }
 }

@@ -12,6 +12,7 @@ import { MatInputModule} from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatSortModule} from '@angular/material/sort';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator'; 
+import { MatSelectModule } from '@angular/material/select'; 
 
 
 
@@ -21,11 +22,11 @@ import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
     ],
     imports: [
         MatButtonModule, MatToolbarModule, MatMenuModule, MatIconModule, MatSidenavModule, MatListModule, 
-        MatTableModule, MatInputModule, MatFormFieldModule, MatSortModule, MatPaginatorModule
+        MatTableModule, MatInputModule, MatFormFieldModule, MatSortModule, MatPaginatorModule, MatSelectModule
     ],
     exports: [
         MatButtonModule, MatToolbarModule, MatMenuModule, MatIconModule, MatSidenavModule, MatListModule, MatNavList, 
-        MatTableModule, MatInputModule, MatFormFieldModule, MatSortModule, MatPaginatorModule
+        MatTableModule, MatInputModule, MatFormFieldModule, MatSortModule, MatPaginatorModule, MatSelectModule
     ]
   })
   export class MaterialModule { }

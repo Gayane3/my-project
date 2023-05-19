@@ -9,6 +9,8 @@ import { MatListModule } from '@angular/material/list';
 import {MatSortModule} from '@angular/material/sort';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator'; 
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatSelectModule } from '@angular/material/select'; 
+
 
 
 @NgModule({
@@ -17,11 +19,11 @@ import { MatDialogModule } from '@angular/material/dialog';
     ],
     imports: [
         MatButtonModule, MatToolbarModule, MatMenuModule, MatIconModule, MatSidenavModule, MatListModule, 
-        MatSortModule, MatPaginatorModule, MatDialogModule
+        MatSortModule, MatPaginatorModule, MatDialogModule, MatSelectModule
     ],
     exports: [
         MatButtonModule, MatToolbarModule, MatMenuModule, MatIconModule, MatSidenavModule, MatListModule, 
-        MatSortModule, MatPaginatorModule, MatDialogModule
+        MatSortModule, MatPaginatorModule, MatDialogModule, MatSelectModule
     ]
   })
   export class MaterialModule { }
