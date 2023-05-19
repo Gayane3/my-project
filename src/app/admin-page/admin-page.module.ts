@@ -9,7 +9,9 @@ import { MenusComponent } from './menus/menus.component';
 import { PostsComponent } from './posts/posts.component';
 import { FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
-import {MatTableModule} from '@angular/material/table'; 
+import {MatTableModule} from '@angular/material/table';
+import { ConfirmationDialogComponent } from './shared/confirmation-dialog/confirmation-dialog.component';
+import { EditMenuComponent } from './menus/edit-menu/edit-menu.component'; 
 
 
 @NgModule({
@@ -19,7 +21,8 @@ import {MatTableModule} from '@angular/material/table';
     AppNavbarComponent,
     MenusComponent,
     PostsComponent,
-    
+    ConfirmationDialogComponent,
+    EditMenuComponent,    
   ],
   imports: [
     CommonModule,
@@ -28,6 +31,7 @@ import {MatTableModule} from '@angular/material/table';
     FormsModule,
     MatInputModule,
     MatTableModule
-  ]
+  ],
+  entryComponents: [ConfirmationDialogComponent, EditMenuComponent]
 })
 export class AdminPageModule { }

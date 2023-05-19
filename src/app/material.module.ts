@@ -8,6 +8,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import {MatSortModule} from '@angular/material/sort';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator'; 
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 @NgModule({
@@ -15,10 +16,12 @@ import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
     
     ],
     imports: [
-        MatButtonModule, MatToolbarModule, MatMenuModule, MatIconModule, MatSidenavModule, MatListModule, MatSortModule, MatPaginatorModule 
+        MatButtonModule, MatToolbarModule, MatMenuModule, MatIconModule, MatSidenavModule, MatListModule, 
+        MatSortModule, MatPaginatorModule, MatDialogModule
     ],
     exports: [
-        MatButtonModule, MatToolbarModule, MatMenuModule, MatIconModule, MatSidenavModule, MatListModule, MatSortModule, MatPaginatorModule
+        MatButtonModule, MatToolbarModule, MatMenuModule, MatIconModule, MatSidenavModule, MatListModule, 
+        MatSortModule, MatPaginatorModule, MatDialogModule
     ]
   })
   export class MaterialModule { }
