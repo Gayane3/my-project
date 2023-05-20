@@ -20,6 +20,7 @@ import { MenusService } from './service/menus/menus.service';
 import { PostsService } from './service/posts/posts.service';
 import { FrontPageComponent } from './front-page/front-page.component';
 import { PagesListComponent } from './front-page/pages-list/pages-list.component';
+import { AppNavbarComponent } from './front-page/app-navbar/app-navbar.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { PagesListComponent } from './front-page/pages-list/pages-list.component
     AppComponent,
     LoginPageComponent,
     FrontPageComponent,
-    PagesListComponent
+    PagesListComponent,
+    AppNavbarComponent
   ],
   imports: [
     BrowserModule,
