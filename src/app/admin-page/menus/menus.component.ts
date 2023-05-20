@@ -6,6 +6,8 @@ import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { MatDialog } from '@angular/material/dialog';
 import { ConfirmationDialogComponent } from '../shared/confirmation-dialog/confirmation-dialog.component';
 import { EditMenuComponent } from './edit-menu/edit-menu.component';
+import { FormControl, FormGroup, Validators, FormBuilder} from '@angular/forms';
+
 
 @Component({
   selector: 'app-menus',
@@ -21,11 +23,18 @@ export class MenusComponent implements OnInit{
     title: "",
     url: ""
   }
+  menuForm!: FormGroup;
+
   dataSource = new MatTableDataSource();
   displayedColumns = ["id", "title", "url", "actions"];
 
-  constructor(private menus: MenusService, public dialog: MatDialog){}
+  constructor(private menus: MenusService, public dialog: MatDialog, private fb: FormBuilder){
+  this.menuForm = this.fb.group({
+    title: ['', Validators.required],
+    url: ['', Validators.required],
 
+  })
+}
  ngOnInit(): void {
    this.menus.getMenus().subscribe((data: any)=> {
     this.dataSource.data = data;
@@ -36,7 +45,8 @@ export class MenusComponent implements OnInit{
   this.dataSource.paginator = this.paginator;
  }
  addMenu(){
-  this.menus.addMenu(this.menuDetails)
+  this.menus.addMenu(this.menuForm.value);
+
  }
 
  applyFilter(filterValue: any){
