@@ -26,7 +26,7 @@ export class AfService {
 
   loginWithGoogle(){
     const provider = new firebase.auth.GoogleAuthProvider();
-    this.afAuth.signInWithPopup(provider).then((credential) =>{
+    this.afAuth.signInWithPopup(provider).then((credential) => {
       this.updateUser(credential.user)
     });
   }

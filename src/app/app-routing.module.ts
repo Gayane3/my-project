@@ -7,10 +7,10 @@ import { AdminGuard } from './guards/admin.guard';
 import { SubscriberGuard } from './guards/subscriber.guard';
 
 const routes: Routes = [
-  {path: '', loadChildren: () => import('./front-page/front-page.module').then(mod => mod.FrontPageModule),},
+  {path: 'home', loadChildren: () => import('./front-page/front-page.module').then(mod => mod.FrontPageModule),},
   {path: 'login', component: LoginPageComponent},
-  {path: 'admin', loadChildren: () => import('./admin-page/admin-page.module').then(mod => mod.AdminPageModule), canActivate: [AdminGuard]}
-
+  {path: 'admin', loadChildren: () => import('./admin-page/admin-page.module').then(mod => mod.AdminPageModule), canActivate: [AdminGuard]},
+  {path: '**', redirectTo: 'home'}
 ];
 
 @NgModule({

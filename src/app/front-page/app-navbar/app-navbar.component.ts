@@ -15,7 +15,7 @@ export class AppNavbarComponent implements OnInit{
 constructor(public afService: AfService, private menus: MenusService){}
 
 ngOnInit(): void {
-  this.afService.user$.subscribe(user => this.user = user);
+  this.afService.user$.subscribe( user => this.user = user);
   this.menus.getMenus().subscribe( menus => {
     this.menusList = menus;
   })

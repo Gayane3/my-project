@@ -6,10 +6,11 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon'; 
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
-import {MatSortModule} from '@angular/material/sort';
+import { MatSortModule } from '@angular/material/sort';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator'; 
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSelectModule } from '@angular/material/select'; 
+import { MatCardModule } from '@angular/material/card'
 
 
 
@@ -19,11 +20,11 @@ import { MatSelectModule } from '@angular/material/select';
     ],
     imports: [
         MatButtonModule, MatToolbarModule, MatMenuModule, MatIconModule, MatSidenavModule, MatListModule, 
-        MatSortModule, MatPaginatorModule, MatDialogModule, MatSelectModule
+        MatSortModule, MatPaginatorModule, MatDialogModule, MatSelectModule, MatCardModule
     ],
     exports: [
         MatButtonModule, MatToolbarModule, MatMenuModule, MatIconModule, MatSidenavModule, MatListModule, 
-        MatSortModule, MatPaginatorModule, MatDialogModule, MatSelectModule
+        MatSortModule, MatPaginatorModule, MatDialogModule, MatSelectModule, MatCardModule
     ]
   })
   export class MaterialModule { }

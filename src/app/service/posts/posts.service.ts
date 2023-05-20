@@ -23,8 +23,16 @@ export class PostsService {
         const data = a.payload.doc.data() as Post;
         const id = a.payload.doc.id;
         return { id, ...data }
-
-
+      })
+    }));
+  }
+  getConditionalPosts(field: string, condition: any, value: string){
+    return this.afs.collection("posts", ref => ref.where(field, condition, value)).snapshotChanges().pipe(
+    map( post => {
+      return post.map(a => {
+        const data = a.payload.doc.data() as Post;
+        const id = a.payload.doc.id;
+        return { id, ...data }
       })
     }));
   }
