@@ -1,6 +1,6 @@
 <mat-toolbar color="primary">
     <mat-toolbar-row>
-        <button mat-button routerLink="/">Angular CMS</button>
+        <button mat-button routerLink="/">JS Tech Blog</button>
     
         <span class="example-spacer"></span>
 
@@ -8,14 +8,14 @@
           <button mat-button routerLink="/home/pages/{{menu.url}}">{{ menu.title }}</button>
         </div>
 
-        <button mat-button routerLink="/home/article">Article Page</button>
+        <button mat-button routerLink="/home/article">Pro Blog</button>
         <div *ngIf="!user">
             <button mat-button (click)="afService.loginWithGoogle()">Login</button>
         </div>
         <div *ngIf="user">
 
-    <button mat-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
-        <span>Hello {{ user.displayName }}</span>
+    <button mat-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu" class="author">
+        <span >Hello {{ user.displayName }}</span>
         <img class="profileImg" [src]="user.photoURL" >
     </button>
       <mat-menu #menu="matMenu" x-position="after" y-position="below" overlapTrigger="false">
